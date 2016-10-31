@@ -1,0 +1,33 @@
+
+# alias to apache instance. Use to start, stop, or restart local server
+alias apache="sudo /usr/sbin/apache2ctl"
+
+# edit php.ini
+alias php_ini="sudo vi /etc/php5/apache2/php.ini"
+
+alias root='cd /var/www'
+
+alias brainwavve='cd /home/vagrant/Code/brainwavve-core/'
+alias activate='source env/bin/activate'
+alias runserver='python manage.py runserver 0.0.0.0:8000'
+
+alias my_shortcuts='echo "
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++ VAGRANT SHORTCUTS                                                          ++
+++ These commands are meant to be run only from vagrant                       ++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   apache               - start, stop, or restart apache instance
+   php_ini              - edit php configuration
+
+   root                 - changes directory to /var/www
+   brainwavve           - changes directory to brainwavve project
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+++ DJANGO shortcuts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  activate              - activates virtualenv for a project
+  deactivate            - deactivates virtualenv for a project
+  runserver             - runs the django dev server on 0.0.0.0:8000
+"'
+
+my_shortcuts
